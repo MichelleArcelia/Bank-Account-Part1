@@ -1,39 +1,11 @@
 /* Week 2 Partner Pair Assignment #1  
  * 
  * PART 1
- * 
-Create the following classes with the following methods:
-AccountHolder
-AccountHolder() - default constructor
-AccountHolder(String firstName, String middleName, String middleName, String ssn, double checkingAccountOpeningBalance, double savingsAccountOpeningBalance)
-
-String getFirstName()
-void setFirstName(String firstName)
-String getMiddleName()
-void setMiddleName(String middleName)
-String getLastName()
-void setLastName(String lastName)
-String getSSN()
-void setSSN(String ssn)
-CheckingAccount getCheckingAccount()
-SavingsAccount getSavingsAccount()
-String toString()
-Sample output:
-Name: John James Doe
-SSN: 123-45-6789
-Checking Account Balance: $100
-Checking Account Interest Rate: 0.0001
-Checking Account Balance in 3 years: $100.03
-Savings Account Balance: $1000
-Savings Account Interest Rate: 0.01
-Savings Account Balance in 3 years: $1030.03
  */
 
 package com.meritamerica.assignment1;
 
-
-
-public class AccountHolder {
+public class AccountHolder extends MeritAmericaBankApp{
 	
 // ***************** VARIABLES *****************
 	
@@ -43,63 +15,92 @@ public class AccountHolder {
 	String ssn;
 	double checkingAccountOpeningBalance;
 	double savingsAccountOpeningBalance;
-	
 
 // ***************** ACCOUNT HOLDER CONSTRUCTOR *****************
-
 	
-private AccountHolder(String firstName, String middleName, String lastName, String ssn, double checkingAccountOpeningBalance, double savingsAccountOpeningBalance) {
-	
-	this.firstName = firstName;
-	this.middleName = middleName; 
-	this.lastName = lastName; 
-	this.ssn = ssn;
-	this.checkingAccountOpeningBalance = checkingAccountOpeningBalance;
-	this.savingsAccountOpeningBalance = savingsAccountOpeningBalance; 
-	
-} 
+	public AccountHolder(String firstName, String middleName, String lastName, String ssn, double checkingAccountOpeningBalance, double savingsAccountOpeningBalance) {
+		
+		this.firstName = firstName;
+		this.middleName = middleName; 
+		this.lastName = lastName; 
+		this.ssn = ssn;
+		this.checkingAccountOpeningBalance = checkingAccountOpeningBalance;
+		this.savingsAccountOpeningBalance = savingsAccountOpeningBalance; 
+	} 
 
 // ***************** GET & SET METHODS *****************
 	
-//FIRST NAME
+// ***** FIRST NAME ***** 
 
-public String getFirstName() {
-	return firstName;
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
+// ***** MIDDLE NAME ***** 
 
-public void setFirstName(String firstName) {
-	this.firstName = firstName;
-}
-
-//MIDDLE NAME
-
-
-//@return - 
-
-public String getMiddleName() {
-	return middleName;
+	public String getMiddleName() {
+		return middleName;
+	}
+		
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
 	}
 
+// ***** LAST NAME ***** 
 
-public void setMiddleName(String middleName) {
-	this.middleName = middleName;
+	public String getLastName() {
+		return lastName;
+	}
+		
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+// ***** SSN ***** 
+
+	public String getSSN() {
+		return ssn;
+	}
+		
+	public void setSSN(String ssn) {
+		this.ssn = ssn;
+	}
+
+//***** CHECKING ACCOUNT ***** 
+	
+	public double getCheckingAccount() {
+		return checkingAccountOpeningBalance;
+	}
+
+//***** SAVINGS ACCOUNT ***** 
+
+		public double getSavingsAccount() {
+			return savingsAccountOpeningBalance;
+		}
+
+// OUTPUT
+	public String toString() {
+		return "Name:" + firstName + " " + middleName + " " + lastName +
+		"SSN:" + ssn +
+		"Checking Account Balance:" + checkingAccountOpeningBalance +
+		"Checking Account Interest Rate: 0.0001" + 
+		"Checking Account Balance in 3 years: **************"; 
+		
+		//FIX THIS!!!!!!!!!!!!!!
+	}
+
 }
-
-
-
-// @Override
-public String toString() {
-	return "first Name" + firstName; 
-}
-
  
 
 
+//@Override ???
+//@return - explain what happens at return
 
-
-
-public void statement() {
+/*public void statement() {
 	System.out.println("Name:" + firstName + middleName + lastName);
 	System.out.println("SSN:" + ssn);
 	System.out.println("Checking Account Balance:" + checkingAccountOpeningBalance);
