@@ -15,7 +15,9 @@ public class MeritAmericaBankApp {
 	
 	    System.out.println("Full Name: " + Holder1.firstName + " " + Holder1.middleName + " " + Holder1.lastName);
 	    
-	    System.out.println("Interest Rate:" + Holder1.);
+	    System.out.println("Account Balance :"+ " " + Holder1.checkingAccountOpeningBalance);
+	    
+	    System.out.println("Saving Balance :"+ " " + Holder1.savingsAccountOpeningBalance);
 	    
 	    
         System.out.println("-----------------------------------------");
@@ -27,4 +29,5 @@ public class MeritAmericaBankApp {
 	}
 
 }
+
 
