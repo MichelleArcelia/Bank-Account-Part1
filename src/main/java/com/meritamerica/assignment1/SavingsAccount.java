@@ -38,16 +38,17 @@ public class SavingsAccount extends MeritAmericaBankApp{
 	}
 	
 
-/*	public boolean deposit(double amount) {
+public boolean deposit(double amount) {
+	
 		if (amount > 0) {
 			savingsAccountOpeningBalance = savingsAccountOpeningBalance + amount;
-			
 		}
 	
-	*/
+
+}
+}
 	
 	
-	}
 	
 	
 	
