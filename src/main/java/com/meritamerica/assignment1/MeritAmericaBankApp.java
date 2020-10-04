@@ -1,3 +1,9 @@
+/* Week 2 Partner Pair Assignment #1  
+ * @date October 3, 2020
+ * PART 3
+ */
+
+
 package com.meritamerica.assignment1;
 
 	

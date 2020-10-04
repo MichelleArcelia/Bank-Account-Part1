@@ -1,5 +1,6 @@
 /* Week 2 Partner Pair Assignment #1  
- * 
+ * @author Michelle Neptune
+ * @date October 3, 2020
  * PART 1
  */
 
