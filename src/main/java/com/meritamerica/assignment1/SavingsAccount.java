@@ -13,42 +13,80 @@ public class SavingsAccount extends MeritAmericaBankApp{
 	 double savingAccountRate;
 	 double savingsAccountOpeningBalance; 
 	 double savingsBalance;
+	 
+	 
 	 double amount; 
+	 boolean withdraw;
 	
 
 // ***************** SAVING ACCOUNT CONSTRUCTOR *****************
 	
 	public SavingsAccount(double savingsAccountOpeningBalance) {	
 		this.savingsAccountOpeningBalance = savingsAccountOpeningBalance; 
+		savingsBalance = 100.00;
 	}
 	
 // ***************** GET METHODS *****************
 
+	
+// ***** BALANCE *****
+	
 	public double getBalance() {
 		return savingsBalance;
 	}
 		
-
+// ***** INTEREST RATE *****
+	
 	public double getInterestRate() {
-		return savingAccountRate;
+		return savingAccountRate = 0.01;
 	}
+
+// ***** WITHDRAW *****
 	
 	public boolean withdraw (double amount) {
-		
-		double amount = double savingsAccountOpeningBalance - boolean withdraw;
-		return amount;
-	
-	}
-	
-	
-	public boolean deposit (double amount) {
-	
-		if (amount > 0) {
-			savingsAccountOpeningBalance = savingsAccountOpeningBalance + amount;
-			
-			return amount;
+		if (savingsBalance - amount >= 0) {
+			savingsBalance = savingsBalance - amount;
+			return true;	
+		}
+		else {
+			return false;
 		}
 	}
+	
+// ***** DEPOSIT *****
+	
+	public boolean deposit1 (double amount) {
+	
+		if (amount >= 0) {
+			savingsBalance = savingsBalance + amount;
+			return true;	
+		}
+		else {
+			return false;
+		}
+	}
+	
+	
+// ***** FUTURE VALUE *****
+	
+	double futureValue(int years) {
+		return years;
+
+		}
+	
+	
+	
+// ***** STRING TO STRING *****
+	
+	// OUTPUT
+		public String toString() {
+			return "\n Savings Account Balance: " + savingsAccountOpeningBalance +
+					"\n Savings Account Interest Rate: " +
+					"\n Savings Account Balance in 3 years: "; 
+			
+		}
+	
+	
 }
 	
 	
