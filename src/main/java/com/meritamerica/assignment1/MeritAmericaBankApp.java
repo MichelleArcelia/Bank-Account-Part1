@@ -16,7 +16,7 @@ public class MeritAmericaBankApp {
 		
 		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 1000);
 		
-		
+	
 		
 		SavingsAccount lunaSavings1 = new SavingsAccount(0);
 		
@@ -25,8 +25,7 @@ public class MeritAmericaBankApp {
 		lunaSavings1.deposit(-1000);
 		
 		
-
-		
+// *************** PROGRAM PRINT FILES ***************
 	
 		System.out.println("-----------------------------------------");
 	    System.out.println("   Welcome to Merit America Bank App!");
@@ -38,16 +37,7 @@ public class MeritAmericaBankApp {
 	    
 	    System.out.println(lunaSavings1.toString());
 
-	    
-	    
-		
-		
-
-		
-		
-		
-		
-	    
+	
 	    
 	    
         System.out.println("-----------------------------------------");
