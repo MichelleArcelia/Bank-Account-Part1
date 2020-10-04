@@ -11,9 +11,16 @@ public class MeritAmericaBankApp {
 
 	public static void main(String[] args) {
 		
-		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 1000);
-		SavingsAccount Savings1 = new SavingsAccount();
 		
+// *************** RUNNING TESTS	 ***************	
+		
+		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 1000);
+		SavingsAccount lunaSavings1 = new SavingsAccount(1000);
+		
+		lunaSavings1.withdraw(200);
+		lunaSavings1.deposit1(100);
+		lunaSavings1.getInterestRate();
+		System.out.println(lunaSavings1.getBalance());
 		
 	
 		System.out.println("-----------------------------------------");

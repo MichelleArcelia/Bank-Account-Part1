@@ -11,13 +11,17 @@ public class SavingsAccount extends MeritAmericaBankApp{
 	
 // ***************** VARIABLES *****************
 	
-	 double savingAccountRate;
+	 double savingAccountInterestRate;
 	 double savingsAccountOpeningBalance; 
+	 
+	 
 	 double savingsBalance;
 	 
+
 	 
 	 double amount; 
 	 boolean withdraw;
+	 boolean deposit1;
 	
 
 // ***************** SAVING ACCOUNT CONSTRUCTOR *****************
@@ -33,13 +37,13 @@ public class SavingsAccount extends MeritAmericaBankApp{
 // ***** BALANCE *****
 	
 	public double getBalance() {
-		return savingsBalance;
+		return savingsAccountOpeningBalance;
 	}
 		
 // ***** INTEREST RATE *****
 	
 	public double getInterestRate() {
-		return savingAccountRate = 0.01;
+		return savingAccountInterestRate = 0.01;
 	}
 
 // ***** WITHDRAW *****
