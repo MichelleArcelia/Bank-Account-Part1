@@ -84,11 +84,11 @@ public class AccountHolder extends MeritAmericaBankApp{
 
 // OUTPUT
 	public String toString() {
-		return "Name:" + firstName + " " + middleName + " " + lastName +
-		"SSN:" + ssn +
-		"Checking Account Balance:" + checkingAccountOpeningBalance +
-		"Checking Account Interest Rate: 0.0001" + 
-		"Checking Account Balance in 3 years: **************"; 
+		return "\n Name: " + firstName + " " + middleName + " " + lastName + 
+		"\n SSN:" + ssn +
+		"\n Checking Account Balance:" + checkingAccountOpeningBalance +
+		"\n Checking Account Interest Rate: 0.0001" + 
+		"\n Checking Account Balance in 3 years: **************"; 
 		
 		//FIX THIS!!!!!!!!!!!!!!
 	}

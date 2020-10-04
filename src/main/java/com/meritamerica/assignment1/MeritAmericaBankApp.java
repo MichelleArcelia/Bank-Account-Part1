@@ -5,7 +5,7 @@ public class MeritAmericaBankApp {
 
 	public static void main(String[] args) {
 		
-		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 50, 10);
+		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 1000);
 	
 		System.out.println("-----------------------------------------");
 	    System.out.println("   Welcome to Merit America Bank App!");
@@ -13,11 +13,9 @@ public class MeritAmericaBankApp {
 	    System.out.println("-----------------------------------------");
 	
 	
-	    System.out.println("Full Name: " + Holder1.firstName + " " + Holder1.middleName + " " + Holder1.lastName);
+	    System.out.println(Holder1.toString());
 	    
-	    System.out.println("Account Balance :"+ " " + Holder1.checkingAccountOpeningBalance);
-	    
-	    System.out.println("Saving Balance :"+ " " + Holder1.savingsAccountOpeningBalance);
+
 	    
 	    
         System.out.println("-----------------------------------------");
