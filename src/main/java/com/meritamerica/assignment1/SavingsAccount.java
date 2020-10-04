@@ -11,105 +11,94 @@ public class SavingsAccount extends MeritAmericaBankApp{
 	
 // ***************** VARIABLES *****************
 	
-	 double savingAccountInterestRate;
-	 double savingsAccountOpeningBalance; 
+	 private static double interestRate = 0.01;
 	 
-	 double newBalance;
-	 
-	 
-	// double savingsBalance;
-	 
-	 double openingBalance = 100; 
-	 
-	 double amount; 
-	 boolean withdraw;
-	 boolean deposit1;
-	 String getInterestRate;
+	 double savingsBalance;
 	
 
 // ***************** SAVING ACCOUNT CONSTRUCTOR *****************
 	
 	public SavingsAccount(double openingBalance) {	
-		this.savingsAccountOpeningBalance = openingBalance; 
-		openingBalance = 100.00;
+		this.savingsBalance = openingBalance; 
 	}
 	
 // ***************** GET METHODS *****************
 
 	
-// ***** BALANCE *****
+// ======= BALANCE ======= 
 	
 	public double getBalance() {
-		return openingBalance;
+		return savingsBalance;
 	}
 		
-// ***** INTEREST RATE *****
+// ======= INTEREST RATE ======= 
 	
 	public double getInterestRate() {
 		
-		
-		
-		return savingAccountInterestRate = 0.01;
+		return interestRate;
 	}
 
-// ***** WITHDRAW *****
+// =======  WITHDRAW ======= 
 	
 	public boolean withdraw (double amount) {
-		if (openingBalance - amount >= 0) {
-			openingBalance = openingBalance - amount;
-			return true;	
-		}
-		else {
-			return false;
-		}
-	}
+		
+	    if (savingsBalance < amount) {
+		      
+		      System.out.println("Sorry, there isn't enough money in your account");
+		      return false; 
+		    } 
+	    
+	    else {
+	    	
+		      
+	    	savingsBalance = savingsBalance - amount;
+	    	System.out.println("Congrats take your withdrawn amount of: " + amount);
+		  
+		      return true;
+		    }
+		  }
+		
 	
-// ***** DEPOSIT *****
+// ======= DEPOSIT ======= 
 	
 	public boolean deposit (double amount) {
 	
-		if (amount <= 0) {
-			
-			System.out.println("CAN NOT DEPOSIT A NEGATIVE AMOUNT");
-			
-			return false; 
-				
-		}
-		else {
-			openingBalance = openingBalance + amount;
-			
-			System.out.println(openingBalance);
-			
-			return true;
-			
-		}
-	}
+	    if (amount < 0) {
+		      
+		      System.out.println("Sorry, your negative amount of " + amount + " can not be deposited");
+		      return false;
+		      
+		    } else {
+		      
+		    	savingsBalance = savingsBalance + amount;
+		    	System.out.println("Congrats we have recieved your deposit of: " + amount );
+		    	
+		      return true;
+		    }
+		  }
 	
 	
-// ***** FUTURE VALUE *****
+// ======= FUTURE VALUE ======= 
 	
 	double futureValue(int years) {
 		
-		
-		
-		return Math.pow(openingBalance, years);
-
+		double FV = savingsBalance * Math.pow(1 + interestRate, years);
+		return FV;
 		}
 	
 	
+// =======  STRING TO STRING - OUTPUT TP BANK APP======= 
 	
-// ***** STRING TO STRING *****
-	
-	// OUTPUT
 		public String toString() {
 
-			return "\n Savings Account Balance: " + openingBalance +
-					"\n Savings Account Interest Rate: " + savingAccountInterestRate +
-					"\n Savings Account Balance in 3 years: "; 
 			
+			return ("\n After your Tranactions here is your Savings Account In Detail: \n " + 
+					"\n Savings Account Balance: " + getBalance() +
+					"\n Savings Account Interest Rate: " + getInterestRate() +
+					"\n Savings Account Balance in 3 years: " + futureValue(3)); 
+
 		}
-	
-	
+
 }
 	
 	
@@ -118,12 +107,3 @@ public class SavingsAccount extends MeritAmericaBankApp{
 	
 
 
-
-
-/* double getBalance()
-double getInterestRate()
-boolean withdraw(double amount)
-boolean deposit(double amount)
-double futureValue(int years)
-String toString()
-*/

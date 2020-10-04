@@ -14,15 +14,14 @@ public class MeritAmericaBankApp {
 		
 // *************** RUNNING TESTS	 ***************	
 		
-		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 1000);
+		//AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 1000);
 		
 	
 		
-		SavingsAccount lunaSavings1 = new SavingsAccount(0);
-		
-		lunaSavings1.withdraw(200);
-		
-		lunaSavings1.deposit(-1000);
+		SavingsAccount lunaSavings1 = new SavingsAccount(50);
+	    
+
+
 		
 		
 // *************** PROGRAM PRINT FILES ***************
@@ -33,12 +32,21 @@ public class MeritAmericaBankApp {
 	    System.out.println("-----------------------------------------");
 	
 	
-	    System.out.println(Holder1.toString());
+	   // System.out.println(Holder1.toString());
+	    
+	    
+	    
+	    
+	    
+		lunaSavings1.withdraw(1);
+		
+		lunaSavings1.deposit(90);
 	    
 	    System.out.println(lunaSavings1.toString());
+	    
+
 
 	
-	    
 	    
         System.out.println("-----------------------------------------");
         System.out.println("         Transaction Complete");
