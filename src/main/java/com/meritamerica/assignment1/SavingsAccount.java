@@ -43,6 +43,8 @@ public class SavingsAccount extends MeritAmericaBankApp{
 // ***** INTEREST RATE *****
 	
 	public double getInterestRate() {
+		
+		
 		return savingAccountInterestRate = 0.01;
 	}
 

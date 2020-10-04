@@ -31,7 +31,7 @@ public class MeritAmericaBankApp {
 	
 	    System.out.println(Holder1.toString());
 	    
-	    System.out.println(Holder1.toString());
+	    System.out.println(lunaSavings1.toString());
 
 	    
 	    

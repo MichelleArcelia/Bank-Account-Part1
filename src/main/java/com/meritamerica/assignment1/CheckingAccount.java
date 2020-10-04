@@ -14,6 +14,7 @@ public class CheckingAccount extends MeritAmericaBankApp{
 	private double balance;
 	
 	
+	
     /** Constructor for object of class CheckingAccount*/
 	public CheckingAccount(double openingBalance) {
 		balance = 100.00;
@@ -60,7 +61,7 @@ public class CheckingAccount extends MeritAmericaBankApp{
 		
 	
 	
-	 String toStrings(){
+	public String toStrings(){
 		 return null;
 	 }
 	 
