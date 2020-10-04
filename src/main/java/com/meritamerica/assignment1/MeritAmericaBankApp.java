@@ -21,14 +21,21 @@ public class MeritAmericaBankApp {
         System.out.println("******************************************");
         
         
-		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 1000);
+		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 5000);
 		
 		System.out.println(Holder1.toString());	
+		
+		Holder1.updatedSavings.withdraw(20);
+		
+		System.out.println("NEW Savings Information: " + Holder1.updatedSavings.toString());
+		
+		
+
         
         
-        System.out.println("-----------------------------------------");
-        System.out.println("          Checking Transactions");	    
-        System.out.println("-----------------------------------------");
+        //System.out.println("-----------------------------------------");
+       // System.out.println("          Checking Transactions");	    
+       // System.out.println("-----------------------------------------");
 	    
 
 //  ============= RUNNING TESTS ON CHECKING ============= 	    
@@ -45,19 +52,13 @@ public class MeritAmericaBankApp {
 	    
 	    
 	    
-        System.out.println("-----------------------------------------");
+     /*   System.out.println("-----------------------------------------");
         System.out.println("          Savings Transactions");
         System.out.println("-----------------------------------------");
 	    
 //  ============= RUNNING TESTS ON SAVINGS ============= 	
         
-        SavingsAccount lunaSavings1 = new SavingsAccount(500);
-	    
-		lunaSavings1.withdraw(1);
-		
-		lunaSavings1.deposit(90);
-	    
-	    System.out.println(lunaSavings1.toString());
+
 	    
 
 	    
@@ -65,10 +66,22 @@ public class MeritAmericaBankApp {
         System.out.println("         Transaction Complete");
         System.out.println("******************************************");
 	    
-	    
+	    */
 	    
 	}
 
 }
 
 
+
+
+/*SavingsAccount lunaSavings1 = new SavingsAccount(500);
+
+lunaSavings1.withdraw(1);
+
+lunaSavings1.deposit(90);
+
+System.out.println(lunaSavings1.toString());
+
+
+*/

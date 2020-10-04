@@ -17,6 +17,10 @@ public class AccountHolder extends MeritAmericaBankApp{
 	double checkingAccountOpeningBalance;
 	double savingsAccountOpeningBalance;
 	
+	CheckingAccount updatedChecking;
+	SavingsAccount updatedSavings;
+	
+	
 	double openingBalance = 100;
 	private static double interestRate = 0.01;
 
@@ -30,6 +34,11 @@ public class AccountHolder extends MeritAmericaBankApp{
 		this.ssn = ssn;
 		this.checkingAccountOpeningBalance = checkingAccountOpeningBalance;
 		this.savingsAccountOpeningBalance = savingsAccountOpeningBalance; 
+		
+		updatedChecking = new CheckingAccount(checkingAccountOpeningBalance);
+		
+		updatedSavings = new SavingsAccount(savingsAccountOpeningBalance);
+		
 	} 
 
 // ***************** GET & SET METHODS *****************
@@ -74,50 +83,36 @@ public class AccountHolder extends MeritAmericaBankApp{
 		this.ssn = ssn;
 	}
 
+	
+	
 //***** CHECKING ACCOUNT ***** 
 	
-	public double getCheckingAccount() {
-		return checkingAccountOpeningBalance;
+	CheckingAccount getCheckingAccount() {
+		
+		return updatedChecking;
 	}
 
 //***** SAVINGS ACCOUNT ***** 
 
-		public double getSavingsAccount() {
+		SavingsAccount getSavingsAccount() {
 			
-			return openingBalance;
+			return updatedSavings;
 		}
 
 // OUTPUT
 	public String toString() {
 
-		return "\n Name: " + firstName + " " + middleName + " " + lastName + 
-		"\n SSN:" + ssn +
+		return ("\n Name: " + firstName + " " + middleName + " " + lastName + 
+		"\n SSN:" + getSSN() +
 		"\n Checking Account Balance: " + openingBalance +
 		"\n Checking Account Interest Rate: " + interestRate +
-		"\n Checking Account Balance in 3 years: ?????????????? \n"; 
+		"\n Checking Account Balance in 3 years: ?????????????? \n" + 
+		"\n" + updatedSavings.toString() );
+		//"\n" + updatedChecking.toString()); 
 		
-		//FIX THIS!!!!!!!!!!!!!!
+		
+
 	}
 
 }
  
-
-
-//@Override ???
-//@return - explain what happens at return
-
-/*public void statement() {
-	System.out.println("Name:" + firstName + middleName + lastName);
-	System.out.println("SSN:" + ssn);
-	System.out.println("Checking Account Balance:" + checkingAccountOpeningBalance);
-	System.out.println("Checking Account Interest Rate: 0.0001");
-	System.out.println("Checking Account Balance in 3 years: **************");
-	System.out.println("Savings Account Balance in 3 years: ***************");
-	System.out.println("Savings Account Interest Rate: 0.01");
-	System.out.println("Savings Account Balance in 3 years:");
-
-
-*/
-
-
-

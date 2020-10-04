@@ -92,8 +92,7 @@ public class SavingsAccount extends MeritAmericaBankApp{
 		public String toString() {
 
 			
-			return ("\n After your Tranactions here is your Savings Account In Detail: \n " + 
-					"\n Savings Account Balance: " + getBalance() +
+			return ( "\n Savings Account Balance: " + getBalance() +
 					"\n Savings Account Interest Rate: " + getInterestRate() +
 					"\n Savings Account Balance in 3 years: " + futureValue(3)); 
 
