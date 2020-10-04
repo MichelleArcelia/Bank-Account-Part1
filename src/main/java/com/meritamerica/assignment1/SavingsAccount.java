@@ -18,13 +18,11 @@ public class SavingsAccount extends MeritAmericaBankApp{
 
 // ***************** SAVING ACCOUNT CONSTRUCTOR *****************
 	
-	public SavingsAccount(double savingsAccountOpeningBalance) {
-		
+	public SavingsAccount(double savingsAccountOpeningBalance) {	
 		this.savingsAccountOpeningBalance = savingsAccountOpeningBalance; 
-
 	}
 	
-// ***** MIDDLE NAME ***** 
+// ***************** GET METHODS *****************
 
 	public double getBalance() {
 		return savingsBalance;
@@ -32,14 +30,23 @@ public class SavingsAccount extends MeritAmericaBankApp{
 		
 
 	public double getInterestRate() {
-		
 		return savingAccountRate;
 	}
 	
-public boolean deposit (double amount) {
+	public boolean withdraw (double amount) {
+		
+		double amount = double savingsAccountOpeningBalance - boolean withdraw;
+		return amount;
+	
+	}
+	
+	
+	public boolean deposit (double amount) {
 	
 		if (amount > 0) {
 			savingsAccountOpeningBalance = savingsAccountOpeningBalance + amount;
+			
+			return amount;
 		}
 	}
 }
