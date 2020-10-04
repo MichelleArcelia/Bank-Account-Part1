@@ -61,13 +61,13 @@ public class CheckingAccount extends MeritAmericaBankApp{
 		
 	
 	
-	public String toStrings(){
-		 return null;
+	//public String toStrings(){
+		// return null;
 	 }
 	 
 	
 	
-	}
+	
 	
 	
 	

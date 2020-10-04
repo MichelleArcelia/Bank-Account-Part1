@@ -14,21 +14,24 @@ public class SavingsAccount extends MeritAmericaBankApp{
 	 double savingAccountInterestRate;
 	 double savingsAccountOpeningBalance; 
 	 
+	 double newBalance;
 	 
-	 double savingsBalance;
 	 
-
+	// double savingsBalance;
+	 
+	 double openingBalance = 100; 
 	 
 	 double amount; 
 	 boolean withdraw;
 	 boolean deposit1;
+	 String getInterestRate;
 	
 
 // ***************** SAVING ACCOUNT CONSTRUCTOR *****************
 	
-	public SavingsAccount(double savingsAccountOpeningBalance) {	
-		this.savingsAccountOpeningBalance = savingsAccountOpeningBalance; 
-		savingsBalance = 100.00;
+	public SavingsAccount(double openingBalance) {	
+		this.savingsAccountOpeningBalance = openingBalance; 
+		openingBalance = 100.00;
 	}
 	
 // ***************** GET METHODS *****************
@@ -37,12 +40,13 @@ public class SavingsAccount extends MeritAmericaBankApp{
 // ***** BALANCE *****
 	
 	public double getBalance() {
-		return savingsAccountOpeningBalance;
+		return openingBalance;
 	}
 		
 // ***** INTEREST RATE *****
 	
 	public double getInterestRate() {
+		
 		
 		
 		return savingAccountInterestRate = 0.01;
@@ -51,8 +55,8 @@ public class SavingsAccount extends MeritAmericaBankApp{
 // ***** WITHDRAW *****
 	
 	public boolean withdraw (double amount) {
-		if (savingsBalance - amount >= 0) {
-			savingsBalance = savingsBalance - amount;
+		if (openingBalance - amount >= 0) {
+			openingBalance = openingBalance - amount;
 			return true;	
 		}
 		else {
@@ -62,14 +66,22 @@ public class SavingsAccount extends MeritAmericaBankApp{
 	
 // ***** DEPOSIT *****
 	
-	public boolean deposit1 (double amount) {
+	public boolean deposit (double amount) {
 	
-		if (amount >= 0) {
-			savingsBalance = savingsBalance + amount;
-			return true;	
+		if (amount <= 0) {
+			
+			System.out.println("CAN NOT DEPOSIT A NEGATIVE AMOUNT");
+			
+			return false; 
+				
 		}
 		else {
-			return false;
+			openingBalance = openingBalance + amount;
+			
+			System.out.println(openingBalance);
+			
+			return true;
+			
 		}
 	}
 	
@@ -77,7 +89,10 @@ public class SavingsAccount extends MeritAmericaBankApp{
 // ***** FUTURE VALUE *****
 	
 	double futureValue(int years) {
-		return years;
+		
+		
+		
+		return Math.pow(openingBalance, years);
 
 		}
 	
@@ -87,8 +102,9 @@ public class SavingsAccount extends MeritAmericaBankApp{
 	
 	// OUTPUT
 		public String toString() {
-			return "\n Savings Account Balance: " + savingsAccountOpeningBalance +
-					"\n Savings Account Interest Rate: " +
+
+			return "\n Savings Account Balance: " + openingBalance +
+					"\n Savings Account Interest Rate: " + savingAccountInterestRate +
 					"\n Savings Account Balance in 3 years: "; 
 			
 		}

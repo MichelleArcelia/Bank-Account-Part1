@@ -16,6 +16,8 @@ public class AccountHolder extends MeritAmericaBankApp{
 	String ssn;
 	double checkingAccountOpeningBalance;
 	double savingsAccountOpeningBalance;
+	
+	double openingBalance;
 
 // ***************** ACCOUNT HOLDER CONSTRUCTOR *****************
 	
@@ -80,14 +82,15 @@ public class AccountHolder extends MeritAmericaBankApp{
 //***** SAVINGS ACCOUNT ***** 
 
 		public double getSavingsAccount() {
-			return savingsAccountOpeningBalance;
+			
+			return openingBalance;
 		}
 
 // OUTPUT
 	public String toString() {
 		return "\n Name: " + firstName + " " + middleName + " " + lastName + 
 		"\n SSN:" + ssn +
-		"\n Checking Account Balance:" + checkingAccountOpeningBalance +
+		"\n Checking Account Balance:" + openingBalance +
 		"\n Checking Account Interest Rate: 0.0001" + 
 		"\n Checking Account Balance in 3 years: **************"; 
 		

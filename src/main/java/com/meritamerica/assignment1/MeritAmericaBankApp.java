@@ -15,12 +15,17 @@ public class MeritAmericaBankApp {
 // *************** RUNNING TESTS	 ***************	
 		
 		AccountHolder Holder1 = new AccountHolder("Luna", "the", "cat", "123-45-6789", 100, 1000);
-		SavingsAccount lunaSavings1 = new SavingsAccount(1000);
+		
+		
+		
+		SavingsAccount lunaSavings1 = new SavingsAccount(0);
 		
 		lunaSavings1.withdraw(200);
-		lunaSavings1.deposit1(100);
-		lunaSavings1.getInterestRate();
-		System.out.println(lunaSavings1.getBalance());
+		
+		lunaSavings1.deposit(-1000);
+		
+		
+
 		
 	
 		System.out.println("-----------------------------------------");
@@ -33,6 +38,16 @@ public class MeritAmericaBankApp {
 	    
 	    System.out.println(lunaSavings1.toString());
 
+	    
+	    
+		
+		
+
+		
+		
+		
+		
+	    
 	    
 	    
         System.out.println("-----------------------------------------");
