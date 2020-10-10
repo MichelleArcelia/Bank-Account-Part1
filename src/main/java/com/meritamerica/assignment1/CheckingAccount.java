@@ -75,6 +75,7 @@ public class CheckingAccount extends MeritAmericaBankApp{
 	//StringtoStringOutput
 	public String toString() {
 		
+		
 		return ("\n After your transaction here is your Checking Account in Detail: \n" +
 				"\n Checking Account Balance: " + getBalance()+
 				"\n Checking Account Interest Rate:" + getInterestRate()+
